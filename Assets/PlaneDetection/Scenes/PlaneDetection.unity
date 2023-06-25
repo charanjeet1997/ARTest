@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f0d81a817df384c9a12aa9a6bc5daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeOnPlaneObjectPrefab: {fileID: 2400579718879820107, guid: 36ad57077dd1a8743be2842ecd1d4f80,
+  placeOnPlaneObjectPrefab: {fileID: 5708403660873467783, guid: 0f76381f749181a45b24c0185a555a7d,
     type: 3}
   placementIndicator: {fileID: 907898037}
   minPlaneSize: 0.3
@@ -648,8 +648,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 20
+  near clip plane: 0.01
+  far clip plane: 100
   field of view: 60
   orthographic: 0
   orthographic size: 5

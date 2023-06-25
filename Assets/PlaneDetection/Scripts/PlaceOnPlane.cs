@@ -71,13 +71,13 @@ public class PlaceOnPlane : MonoBehaviour
     private void PlaceARObjectOnPlane(Pose pose,ARPlane plane)
     {
         Vector3 position = pose.position;
-        Vector3 direction = arCamera.transform.position - pose.position;
-        direction.y = 0f;
-        Quaternion lookRotation = Quaternion.LookRotation(direction, Vector3.up);
         ARAnchor anchor = anchorManager.AttachAnchor(plane, pose);
         placeOnPlaneObject = Instantiate(placeOnPlaneObjectPrefab,anchor.transform);
         placeOnPlaneObject.transform.localScale = Vector3.one * scaleFactor;
         placementIndicator.SetActive(false);
+        Vector3 direction = arCamera.transform.position - placeOnPlaneObject.transform.position;
+        direction.y = 0f;
+        Quaternion lookRotation = Quaternion.LookRotation(direction, Vector3.up);
         TogglePlanes(false);
         sessionOrigin.MakeContentAppearAt(placeOnPlaneObject.transform, position, lookRotation);
     }
